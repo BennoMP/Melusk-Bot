@@ -1,7 +1,7 @@
 import time
 import discord
 
-TOKEN = 'Njk1OTY3NDc4NTg0NTczOTg0.Xoh5lg.8PjM7J17nNZVOpD0w62eoKAwqIM'
+TOKEN = # Put the token here.
 
 client = discord.Client()
 
