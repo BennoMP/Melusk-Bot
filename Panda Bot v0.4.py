@@ -58,7 +58,7 @@ async def on_message(message):
         msg = 'Hello {0.author.mention}'.format(message)
         await message.channel.send(msg)
 
-    if 'pbot!chatrevive' in message.content::
+    if 'pbot!chatrevive' in message.content:
         msg = '@everyone wake up!'.format(message)
         await message.channel.send(msg)
 
