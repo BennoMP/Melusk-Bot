@@ -1,5 +1,6 @@
 # PANDA BOT VERSION 0.4 ©2020 BENNO PRINS
 
+# Setup and startup of the bot
 import discord
 import random
 import os
@@ -8,11 +9,11 @@ from os import system, name
 from time import sleep
 
 def clear(): 
-    # for Windows 
+    # for Windows (Windows XP and up. Won't work on Windows ME and older, not that I recommend you to connect that to the interwebz XD)
     if name == 'nt': 
         _ = system('cls') 
   
-    # for MacOS and Linux
+    # for MacOS and Linux (Works on Android too :D)
     else: 
         _ = system('clear') 
 
@@ -38,10 +39,15 @@ async def on_ready():
     print('pbot!test - sends I\'m working')
     print('pbot!chatrevive - Mentions everyone')
 
+# End of setup and startup, terminal is displaying information about the bot
+
+# Prevents bot from responding to itself
 @client.event
 async def on_message(message):
     if message.author == client.user:
         return
+
+# Bot commands and execution
 
 #    if message.content == "banhammer":
 #        msg = 'I can\'t ban you but my creator can, {0.author.mention}'.format(message)
@@ -86,6 +92,7 @@ async def on_message(message):
         msg = 'Pong!'
         await message.channel.send(msg)
 
+    # Took me a while to get this to work. Basically gets a random answer to a yes/no question
     if 'pbot!8ball' in message.content:
         possible_responses = [
         'It is decidedly so',
@@ -111,5 +118,3 @@ async def on_message(message):
         await message.channel.send(random.choice(possible_responses) + ", " + message.author.mention)
 
 client.run(TOKEN)
-
-
