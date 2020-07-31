@@ -1,4 +1,4 @@
-# Melusk BOT VERSION 0.4 ©2020 BENNO PRINS (Discord: Benno#9512)
+# Melusk BOT VERSION 0.5 ©2020 BENNO PRINS (Discord: Benno#9512)
 
 # Setup and startup of the bot
 import discord
