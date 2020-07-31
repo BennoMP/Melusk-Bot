@@ -18,7 +18,7 @@ def clear():
     else: 
         _ = system('clear') 
 
-TOKEN = 'Njk1OTY3NDc4NTg0NTczOTg0.Xoy-Dg.u1RZKDpk-M-Mi-3p2LLQv_cwpWc'
+TOKEN = {token here}
 PREFIX = 'mb!'
 
 client = discord.Client(command_prefix=PREFIX)
